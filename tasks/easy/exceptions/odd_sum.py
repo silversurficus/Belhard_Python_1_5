@@ -13,9 +13,18 @@ TypeError с сообщением "Все элементы списка долж
 
 
 def odd_sum(int_list: list) -> int:
-    summa = 0
-    # TODO написать свой код здесь
-    return summa
+    j = 0
+    Odd_Sum = 0
+    if all([isinstance(item, int) for item in int_list]):
+        while (j < len(int_list)):
+            if (int_list[j] % 2 == 0):
+                pass
+            else:
+                Odd_Sum = Odd_Sum + int_list[j]
+            j = j + 1
+    else:
+        raise TypeError
+    return Odd_Sum
 
 
 if __name__ == '__main__':

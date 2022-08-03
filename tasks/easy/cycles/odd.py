@@ -14,13 +14,14 @@
 odd_in_list([1, False, 2, -1, 'Hi', 4, 6, [], (), -8]) -> [2, 4, 6, -8]
 odd_in_list([2, -1, 4, True, None, 6]) -> [2, 4, 6]
 """
-some_list1 = []
 
 
 def odd_in_list(some_list: list) -> list:
-    odd_list = []
-    # TODO Написать свой код здесь
-    return odd_list
+    numbers = [x for x in some_list if type(x) == int]
+    print(numbers)
+    only_odd = [i for i in numbers if int(i) % 2 == 0]
+    print(only_odd)
+    return only_odd
 
 
 if __name__ == '__main__':
